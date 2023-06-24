@@ -1,12 +1,16 @@
 #pragma once
 #include <JuceHeader.h>
 
-class MonitorSettingsComponent : public Component//,other class 4????
+class MonitorSettingsComponent :public juce::Component,
+								public juce::TextEditor::Listener,
+								public juce::ComboBox::Listener,
+								public juce::Button::Listener,
+								public juce::Slider::Listener
 {
 public:
-	void sub_14018D500(__int64* a1, __int64 a2);//override
-	void sub_14018D490(__int64 a1, __int64 a2);//override
-	__int64 sub_14018D4D0(__int64* a1, __int64 a2);//override
+	void comboBoxChanged(ComboBox* comboBoxThatHasChanged) override;
+	void sliderValueChanged(Slider* slider) override;
+	void buttonClicked(Button*) override;	
 	void paint(Graphics&) override;
 };
 

@@ -41,7 +41,7 @@ void MonSESettingsComponent::paint(Graphics&)
 */
 
 }
-void MonSESettingsComponent::sub_1401916F0(__int64* a1, __int64 a2)
+void MonSESettingsComponent::comboBoxChanged(ComboBox* comboBoxThatHasChanged)
 {
 	/*__int64 v3; // rcx
 	__m128i v4; // [rsp+20h] [rbp-18h] BYREF

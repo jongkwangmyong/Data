@@ -1,5 +1,5 @@
 #include "MonitorControllerComponent.h"
-void MonitorControllerComponent::sub_140187B20(__int64 a1, __int64 a2)
+void  MonitorControllerComponent::comboBoxChanged(ComboBox* comboBoxThatHasChanged)
 {
 	/*__int64 v3; // rdx
 	_QWORD* v4; // rdi
@@ -111,9 +111,9 @@ void MonitorControllerComponent::sub_140187B20(__int64 a1, __int64 a2)
 		((void(__fastcall*)(__int64(__fastcall***)(), __int64*))(*v8)[22])(v8, v9);
 	}*/
 }
-__int64 MonitorControllerComponent::sub_140188350(__int64 a1, __int64 a2)
+void MonitorControllerComponent::sliderValueChanged(Slider* slider)
 {
-	return 1;
+	
 	/*__int64 v3; // rcx
 	float v4; // xmm6_4
 	__int64 v5; // rdx
@@ -140,7 +140,7 @@ __int64 MonitorControllerComponent::sub_140188350(__int64 a1, __int64 a2)
 	}
 	return result;*/
 }
-void MonitorControllerComponent::sub_140187810(__int64* a1, char* a2)
+void MonitorControllerComponent::changeListenerCallback(ChangeBroadcaster* source)
 {
 	/*__int64* v2; // rbx
 	__int64 v3; // r9
@@ -196,9 +196,9 @@ void MonitorControllerComponent::sub_140187810(__int64* a1, char* a2)
 		}
 	}*/
 }
-bool MonitorControllerComponent::sub_140187E70(__int64 a1, __int64 a2)
+void MonitorControllerComponent::buttonClicked(Button*)
 {
-	return true;
+	
 	/*__int64 v4; // rcx
 	unsigned __int8 v5; // r14
 	_QWORD* v6; // rdi
@@ -370,7 +370,7 @@ LABEL_28:
 	v31 = sub_14022D460(*((_QWORD*)ArgList + 66));
 	return Component::setEnabled(*(_QWORD*)(a1 + 248), v31 != 0);*/
 }
-void MonitorControllerComponent::sub_140187990(__int64 a1)
+void MonitorControllerComponent::timerCallback()
 {
 	/*__int64 v2; // rbx
 	__int64 v3; // rdi

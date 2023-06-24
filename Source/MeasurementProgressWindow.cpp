@@ -1,8 +1,7 @@
 #include "MeasurementProgressWindow.h"
-
-__int64 MeasurementProgressWindow::sub_14016D330(__int64 a1)
+void MeasurementProgressWindow::run()
 {
-	return 1;
+	
 	/*_QWORD* v2; // rdi
 	struct _Mtx_internal_imp_t* v3; // rbx
 	int v4; // eax
@@ -802,7 +801,7 @@ __int64 MeasurementProgressWindow::sub_14016D330(__int64 a1)
 		result = sub_1400020C0(v6, v8, (v188[2] - (__int64)v8) >> 3);
 	return result;*/
 }
-void MeasurementProgressWindow::sub_14016C090(__int64 a1, char a2)
+void MeasurementProgressWindow::threadComplete(bool userPressedCancel)
 {
 	/*void* v3; // rcx
 	void* v4; // rcx

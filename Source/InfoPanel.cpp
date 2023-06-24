@@ -1,5 +1,5 @@
 #include "InfoPanel.h"
-__int64 InfoPanel::sub_140168170(__int64* a1, __int64 a2, __int64 a3)
+void InfoPanel::buttonClicked(Button*)
 {
 	/*unsigned __int8 v3; // al
 	__int64 v4; // r8
@@ -60,9 +60,9 @@ __int64 InfoPanel::sub_140168170(__int64* a1, __int64 a2, __int64 a3)
 		}
 	}
 	return result;*/
-	return 1;
+	
 }
-void InfoPanel::sub_140167080(__int64* a1, char* a2)
+void InfoPanel::changeListenerCallback(ChangeBroadcaster* source)
 {
 	/*if (a2 == (char*)ArgList + 1104 || a2 == (char*)ArgList + 936)
 		goto LABEL_14;
@@ -96,7 +96,7 @@ void InfoPanel::sub_140167080(__int64* a1, char* a2)
 		sub_140167510(a1 - 25);
 	}*/
 }
-__int64  InfoPanel::sub_140168120(__int64 a1)
+void  InfoPanel::timerCallback()
 {
 	/*__int64 v2; // rbx
 	__int64 result; // rax
@@ -107,7 +107,7 @@ __int64  InfoPanel::sub_140168120(__int64 a1)
 	if (v2)
 		result = (**(__int64(__fastcall***)(__int64, __int64))v2)(v2, 1i64);
 	return result;*/
-	return 1;
+	//return 1;
 }
 void InfoPanel::lookAndFeelChanged()
 {

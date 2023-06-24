@@ -1,12 +1,4 @@
 ﻿#include "GLMAbout.h"
-GLMAbout::GLMAbout(const String& name, Colour colour,
-	const bool escapeCloses, const bool onDesktop,
-	const float scale)
-	: DocumentWindow(name, colour, DocumentWindow::closeButton, onDesktop),
-	desktopScale(scale),
-	escapeKeyTriggersCloseButton(escapeCloses)
-{
-}
 
 GLMAbout::~GLMAbout() = default;
 
@@ -79,17 +71,23 @@ void GLMAbout::paint(Graphics& g)
 }
 void GLMAbout::resized()
 {
-	DocumentWindow::resized();
-
-	if (escapeKeyTriggersCloseButton)
-	{
-		if (auto* close = getCloseButton())
-		{
-			const KeyPress esc(KeyPress::escapeKey, 0, 0);
-
-			if (!close->isRegisteredForShortcut(esc))
-				close->addShortcut(esc);
-		}
-	}
+	/*Component::setBounds(
+		*(_QWORD*)(a1 + 184),
+		0,
+		240,
+		COERCE_UNSIGNED_INT64((float)*(int*)(a1 + 40) + 6.755399441055744e15),
+		24);
+	Component::setBounds(
+		*(_QWORD*)(a1 + 192),
+		0,
+		270,
+		COERCE_UNSIGNED_INT64((float)*(int*)(a1 + 40) + 6.755399441055744e15),
+		24);
+	return Component::setBounds(
+		*(_QWORD*)(a1 + 200),
+		0,
+		304,
+		COERCE_UNSIGNED_INT64((float)*(int*)(a1 + 40) + 6.755399441055744e15),
+		24);*/
 
 }

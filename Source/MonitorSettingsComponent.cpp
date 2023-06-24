@@ -1,5 +1,5 @@
 #include "MonitorSettingsComponent.h"
-void MonitorSettingsComponent::sub_14018D500(__int64* a1, __int64 a2)
+void MonitorSettingsComponent::comboBoxChanged(ComboBox* comboBoxThatHasChanged)
 {
 	/*__int64 v3; // rcx
 	__int64 v4; // rcx
@@ -26,7 +26,7 @@ void MonitorSettingsComponent::sub_14018D500(__int64* a1, __int64 a2)
 		}
 	}*/
 }
-void MonitorSettingsComponent::sub_14018D490(__int64 a1, __int64 a2)
+void MonitorSettingsComponent::sliderValueChanged(Slider* slider)
 {
 	/*__int64 v2; // r8
 	__int64 v3; // rbx
@@ -38,9 +38,9 @@ void MonitorSettingsComponent::sub_14018D490(__int64 a1, __int64 a2)
 		*(_DWORD*)(v3 + 100) = (int)*(double*)sub_14009F390(*(_QWORD*)(v2 + 512)).m128_u64;
 	}*/
 }
-__int64 MonitorSettingsComponent::sub_14018D4D0(__int64* a1, __int64 a2)
+void MonitorSettingsComponent::buttonClicked(Button*)
 {
-	return 1;
+	
 	/*__int64 result; // rax
 
 	if (a2 == a1[5] || a2 == a1[6] || a2 == a1[7])

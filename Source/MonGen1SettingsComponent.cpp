@@ -1,5 +1,5 @@
 #include "MonGen1SettingsComponent.h"
-void MonGen1SettingsComponent::sub_14017EAA0(__int64 a1, __int64 a2)
+void MonGen1SettingsComponent::sliderValueChanged(Slider* slider)
 {
 	/*__int64 v2; // r8
 	__int64 v3; // rbx
@@ -11,7 +11,7 @@ void MonGen1SettingsComponent::sub_14017EAA0(__int64 a1, __int64 a2)
 		*(_DWORD*)(v3 + 100) = (int)*(double*)sub_14009F390(*(_QWORD*)(v2 + 512)).m128_u64;
 	}*/
 }
-void MonGen1SettingsComponent::sub_14017EB10(__int64* a1, __int64 a2)
+void MonGen1SettingsComponent::comboBoxChanged(ComboBox* comboBoxThatHasChanged)
 {
 	/*__int64 v3; // rcx
 	__int64 v4; // rcx
@@ -38,14 +38,13 @@ void MonGen1SettingsComponent::sub_14017EB10(__int64* a1, __int64 a2)
 		}
 	}*/
 }
-__int64 MonGen1SettingsComponent::sub_14017EAE0(__int64* a1, __int64 a2)
+void MonGen1SettingsComponent::buttonClicked(Button*)
 {
 	/*__int64 result; // rax
 
 	if (a2 == a1[6] || a2 == a1[7] || a2 == a1[8])
 		result = sub_14017E9C0(a1 - 23);
 	return result;*/
-	return 1;
 }
 void MonGen1SettingsComponent::paint(Graphics&)
 {

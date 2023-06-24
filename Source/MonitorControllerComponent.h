@@ -1,13 +1,18 @@
 #pragma once
 #include <JuceHeader.h>
-class MonitorControllerComponent :  public Component//,other class 5?????
+class MonitorControllerComponent :  public juce::Component,
+									public juce::Timer,
+									public juce::ChangeListener,
+									public juce::Slider::Listener,
+									public juce::Button::Listener,
+									public juce::ComboBox::Listener
 {
 public:
-	void sub_140187B20(__int64 a1, __int64 a2); //override
-	__int64 sub_140188350(__int64 a1, __int64 a2);//override
-	void sub_140187810(__int64* a1, char* a2);//override
-	bool sub_140187E70(__int64 a1, __int64 a2);//override
-	void sub_140187990(__int64 a1);//override
+	void comboBoxChanged(ComboBox* comboBoxThatHasChanged) override;	
+	void sliderValueChanged(Slider* slider) override;
+	void changeListenerCallback(ChangeBroadcaster* source) override;	
+	void buttonClicked(Button*) override;	
+	void timerCallback() override;	
 	void mouseDown(const MouseEvent& event) override;
 	void lookAndFeelChanged() override;
 	void paint(Graphics&) override;

@@ -87,7 +87,7 @@ void GroupPresetInfo::resized()
 	Component::setBounds(*(_QWORD*)(a1 + 256), *(_DWORD*)(a1 + 40) - 165, *(_DWORD*)(a1 + 44) - 639, 150, 24);
 	return Component::setBounds(*(_QWORD*)(a1 + 264), 0, *(_DWORD*)(a1 + 44) - 42, 150, 32);*/
 }
-void GroupPresetInfo::sub_14015B700(__int64* a1, __int64 a2)
+void GroupPresetInfo::buttonClicked(Button*)
 {
 	/*_BYTE* v3; // rcx
 	__int64 v4; // rbx

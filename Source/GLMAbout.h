@@ -3,15 +3,10 @@
 namespace juce
 {
 
-class GLMAbout : public DocumentWindow
+class GLMAbout : public Component
 {
 public:
-	//==============================================================================
-	GLMAbout(const String& name,
-		Colour backgroundColour,
-		bool escapeKeyTriggersCloseButton,
-		bool addToDesktop = true,
-		float desktopScale = 1.0f);
+	//==============================================================================	
 	~GLMAbout() override;
 
 	void mouseEnter(const MouseEvent& event) override;

@@ -1,16 +1,24 @@
 #pragma once
 #include <JuceHeader.h>
 
-class MidiSettingsComponent :    public Component//,other class 4 ????
+class MidiSettingsComponent :    public juce::Component,
+								 public juce::ChangeListener,
+	 							 public juce::Button::Listener,
+							 	 public juce::Slider::Listener,
+								 public juce::ComboBox::Listener
 {
 public:
-	__int64 sub_140175A40(__int64 a1);//override
-	void  sub_140172F90(__int64 a1);
+	 void sliderValueChanged(Slider* slider) override;		
 	void paint(Graphics&) override;
 	void resized() override;
-	void sub_140175A20(__int64 a1);//override
-	void sub_140175A60(__int64* a1, __int64 a2);//override
-	void sub_14016EA70(__int64 a1, __int64 a2);//override
+	void comboBoxChanged(ComboBox* comboBoxThatHasChanged) override;
+
+	void buttonClicked(Button*) override;
+	void changeListenerCallback(ChangeBroadcaster* source) override;	
+
+	void sub_140172F90(__int64 a1);
+
+
 private:
 };
 

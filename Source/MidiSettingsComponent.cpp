@@ -1,8 +1,8 @@
 #include "MidiSettingsComponent.h"
-__int64 MidiSettingsComponent::sub_140175A40(__int64 a1)
+
+void MidiSettingsComponent::sliderValueChanged(Slider* slider)
 {
-	//return sub_140172F90(a1 - 192);
-	return 1;
+	//return sub_140172F90(a1 - 192);	
 }
 void  MidiSettingsComponent::sub_140172F90(__int64 a1)
 {
@@ -1616,11 +1616,11 @@ void MidiSettingsComponent::resized()
 	return Component::setBounds(*(_QWORD*)(a1 + 1016), 426, 608, 152, 24);*/
 
 }
-void MidiSettingsComponent::sub_140175A20(__int64 a1)
+void MidiSettingsComponent::comboBoxChanged(ComboBox* comboBoxThatHasChanged)
 {
-	sub_140172F90(a1 - 200);
+	//sub_140172F90(a1 - 200);
 }
-void MidiSettingsComponent::sub_140175A60(__int64* a1, __int64 a2)
+void MidiSettingsComponent::buttonClicked(Button*)
 {
 	/*void(__fastcall * **v2)(_QWORD, __int64); // rcx
 
@@ -1664,7 +1664,7 @@ void MidiSettingsComponent::sub_140175A60(__int64* a1, __int64 a2)
 */
 
 }
-void MidiSettingsComponent::sub_14016EA70(__int64 a1, __int64 a2)
+void MidiSettingsComponent::changeListenerCallback(ChangeBroadcaster* source)
 {
 	/*__int64 v2; // r13
 	int v3; // er14
@@ -1813,3 +1813,4 @@ void MidiSettingsComponent::sub_14016EA70(__int64 a1, __int64 a2)
 		}
 	}*/
 }
+

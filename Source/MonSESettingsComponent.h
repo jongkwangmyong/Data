@@ -1,11 +1,12 @@
 #pragma once
 #include <JuceHeader.h>
 
-class MonSESettingsComponent :    public Component//,other class 2??
+class MonSESettingsComponent :  public juce::Component,
+								public juce::ComboBox::Listener,
+								public juce::Slider::Listener
 {
 public:
 	void paint(Graphics&) override;
-	void sub_1401916F0(__int64* a1, __int64 a2);//override
-
+	void comboBoxChanged(ComboBox* comboBoxThatHasChanged) override;
 };
 

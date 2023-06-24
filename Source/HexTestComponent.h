@@ -1,6 +1,9 @@
 #pragma once
 #include <JuceHeader.h>
-class HexTestComponent : public TreeView
+class HexTestComponent :public Component,
+						public DragAndDropTarget,
+						public SettableTooltipClient,
+						private Button::Listener
 {
 public:
 	void setTooltip(const String& newTooltip) override;

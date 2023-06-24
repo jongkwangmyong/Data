@@ -1,11 +1,14 @@
 #pragma once
 #include <JuceHeader.h>
-class MonGen1SettingsComponent : public Component//,other class 3???
+class MonGen1SettingsComponent :public juce::Component,
+								public juce::ComboBox::Listener,
+								public juce::Button::Listener,
+								public juce::Slider::Listener								
 {
 public:
-	void sub_14017EAA0(__int64 a1, __int64 a2);//override
-	void sub_14017EB10(__int64* a1, __int64 a2);//override
-	__int64 sub_14017EAE0(__int64* a1, __int64 a2);//override
+	void sliderValueChanged(Slider* slider) override;
+	void comboBoxChanged(ComboBox* comboBoxThatHasChanged) override;
+	void buttonClicked(Button*) override;
 	void paint(Graphics&) override;
 private:
 };

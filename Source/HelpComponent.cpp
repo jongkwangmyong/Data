@@ -52,7 +52,7 @@ void HelpComponent::resized()
 	Component::setBounds(*(_QWORD*)(a1 + 248), *(_DWORD*)(a1 + 40) - 800, *(_DWORD*)(a1 + 44) - 256, 150, 32);
 	return Component::setBounds(*(_QWORD*)(a1 + 256), *(_DWORD*)(a1 + 40) - 800, *(_DWORD*)(a1 + 44) - 192, 150, 32);*/
 }
-void HelpComponent::sub_14015D490(__int64* a1, __int64 a2)
+void HelpComponent::buttonClicked(Button*)
 {
 	/*__int64 v3; // rdx
 	__int64 v4; // rsi
