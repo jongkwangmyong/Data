@@ -1,5 +1,6 @@
 #include "AcousticEditorComponent.h"
 AcousticEditorComponent::AcousticEditorComponent()
+	:btnPos_x(0), btnPos_y(0)
 {
 
 }
@@ -616,9 +617,11 @@ void AcousticEditorComponent::paint(Graphics& g)
 
 void AcousticEditorComponent::resized()
 {
+	new_button1.setBounds(btnPos_x - 151, btnPos_y - 36, 150, 32);
+	new_button2.setBounds(0, btnPos_y - 36, 150, 32);
+	frequencyGraphComponent.setBounds(frequencyGraphComponentPos_x, frequencyGraphComponentPos_y, frequencyGraphComponentPos_x, fmin(btnPos_y / 2, frequencyGraphComponentPos_x));
+
 /*
-	Component::setBounds(a1[24].m128i_i64[1], a1[2].m128i_i32[2] - 151, a1[2].m128i_i32[3] - 36, 150, 32);
-	Component::setBounds(a1[25].m128i_i64[0], 0, a1[2].m128i_i32[3] - 36, 150, 32);
 	v2 = a1[2].m128i_i32[3] / 2;
 	v3 = _mm_srli_si128(a1[2], 8).m128i_u64[0];
 	v47 = a1[2].m128i_i64[0];
